@@ -1,7 +1,7 @@
 import React from "react";
 import classNames from 'classnames';
 
-export function Button({outline, className, children}) {
+function Button({outline, className, children}) {
     return (
     <button className={ classNames('button', className, {
         'button-outline': outline,
@@ -10,3 +10,5 @@ export function Button({outline, className, children}) {
     </button>
     )
 }
+
+export default Button;

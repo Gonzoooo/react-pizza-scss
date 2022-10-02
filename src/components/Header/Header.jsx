@@ -1,7 +1,7 @@
-import logo from "../scss/assets/img/pizza-logo.svg";
-import {Button} from "../Button/Button";
+import logo from "../../scss/assets/img/pizza-logo.svg";
+import {Button} from "../../utils/index";
 
-export function Header() {
+function Header() {
     return (
         <div className="header">
             <div className="container">
@@ -52,3 +52,5 @@ export function Header() {
         </div>
     )
 }
+
+export default Header;
