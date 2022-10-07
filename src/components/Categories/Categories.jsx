@@ -6,6 +6,7 @@ function Categories({items}) {
     function onActiveButton(i) {
         setActiveButton(i);
     }
+    
     return (
         <div className="categories">
             <ul>
