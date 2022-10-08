@@ -1,5 +1,6 @@
 import "./App.css";
 import {Header,Categories} from "./utils/index";
+import SortPopup from "./components/SortPopup/SortPopup";
 
 function App() {
   return (
@@ -26,13 +27,7 @@ function App() {
                   <b>Сортировка по:</b>
                   <span>популярности</span>
                 </div>
-                <div className="sort__popup">
-                  <ul>
-                    <li className="active">популярности</li>
-                    <li>цене</li>
-                    <li>алфавиту</li>
-                  </ul>
-                </div>
+                <SortPopup items={[{name: 'популярности', type: 'popular'}, {name: 'цене', type: 'price'}, {name: 'алфавиту', type: 'alphabet'}]}/>
               </div>
             </div>
             <h2 className="content__title">Все пиццы</h2>
