@@ -1,5 +1,6 @@
 const initialState = {
-    items: []
+    items: [],
+    isLoaded: false
 }
 
 function pizzas(state = initialState, action) {
@@ -7,6 +8,7 @@ function pizzas(state = initialState, action) {
         return {
             ...state,
             items: action.payload,
+            isLoaded: true
         }
     }
     return state;

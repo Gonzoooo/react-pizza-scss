@@ -5,7 +5,7 @@ function SortPopup({items}){
 
     const [activeIcon, setActiveIcon] = React.useState(0);
 
-    const activeName = items[activeIcon];
+    const activeName = items[activeIcon].name;
 
     const sortRef = React.useRef();
 
@@ -51,7 +51,7 @@ function SortPopup({items}){
                 <ul>
                     {
                      items.map((item, i)=> (
-                         <li key={`${i}_${item}`} onClick={()=> onActiveIcon(i)} className={activeIcon === i ? 'active' : ''}>{item}</li>
+                         <li key={`${i}_${item}`} onClick={()=> onActiveIcon(i)} className={activeIcon === i ? 'active' : ''}>{item.name}</li>
                      ))
                     }
                 </ul>
