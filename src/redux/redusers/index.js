@@ -3,8 +3,8 @@ import filterReducer from "../redusers/filters";
 import pizzasReducer from "../redusers/pizzas";
 
 const rootReducer = combineReducers({
-    filterReducer,
-    pizzasReducer
+    filter: filterReducer,
+    pizzas: pizzasReducer,
 });
 
 export default rootReducer;
