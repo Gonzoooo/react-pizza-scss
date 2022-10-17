@@ -1,12 +1,13 @@
 import React from 'react';
 
-function Categories({items}) {
+const Categories = React.memo(function Categories({items, onClickItem}) {
     const [activeButton, setActiveButton] = React.useState(null);
 
     function onActiveButton(i) {
         setActiveButton(i);
+        onClickItem(i);
     }
-    
+
     return (
         <div className="categories">
             <ul>
@@ -19,6 +20,6 @@ function Categories({items}) {
             </ul>
         </div>
     );
-}
+});
 
 export default Categories;
