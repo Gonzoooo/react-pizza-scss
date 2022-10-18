@@ -1,11 +1,9 @@
 import React from "react";
 
-const SortPopup = React.memo(function SortPopup({items}){
+const SortPopup = React.memo(function SortPopup({items, activeSortType, onClickSortType}){
     const [visiblePopup, setVisiblePopup] = React.useState(false)
 
-    const [activeIcon, setActiveIcon] = React.useState(0);
-
-    const activeName = items[activeIcon].name;
+    const activeName = items.find((obj) => obj.type === activeSortType).name;
 
     const sortRef = React.useRef();
 
@@ -14,7 +12,7 @@ const SortPopup = React.memo(function SortPopup({items}){
     }
 
     function onActiveIcon(i) {
-        setActiveIcon(i);
+        onClickSortType(i);
         setVisiblePopup(false);
     }
 
@@ -50,8 +48,8 @@ const SortPopup = React.memo(function SortPopup({items}){
             {visiblePopup && <div className="sort__popup">
                 <ul>
                     {
-                        items.map((item, i)=> (
-                            <li key={`${i}_${item}`} onClick={()=> onActiveIcon(i)} className={activeIcon === i ? 'active' : ''}>{item.name}</li>
+                        items.map((obj, item)=> (
+                            <li key={`${obj}_${item}`} onClick={()=> onActiveIcon(obj)} className={activeSortType === obj ? 'active' : ''}>{obj.name}</li>
                         ))
                     }
                 </ul>

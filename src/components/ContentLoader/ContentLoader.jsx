@@ -9,6 +9,7 @@ function PizzasLoader() {
             viewBox="0 0 280 460"
             backgroundColor="#f3f3f3"
             foregroundColor="#ecebeb"
+            className="pizza-block"
         >
             <rect x="3" y="274" rx="6" ry="6" width="278" height="84" />
             <circle cx="135" cy="116" r="115" />
