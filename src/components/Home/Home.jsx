@@ -13,17 +13,17 @@ function Home() {
     const categoryNames = ['Мясные','Вегетарианская','Гриль','Острые','Закрытые'];
     const onSelectCategory = React.useCallback((index) => {
         dispatch(setCategory(index));
-    }, []);
+    }, [dispatch]);
 
     const onSelectSortType = React.useCallback((type) => {
         dispatch(setSortBy(type));
-    }, []);
+    }, [dispatch]);
 
     const sortItems = [{name: 'популярности', type: 'popular', order: 'desc'}, {name:'цене', type: 'price', order: 'desc'}, {name:'алфавиту', type: 'name', order: 'asc'}];
 
     React.useEffect(()=> {
         dispatch(fetchPizzas(category, sortBy))
-    }, [category, sortBy]);
+    }, [dispatch, category, sortBy]);
 
     return (
        <>
