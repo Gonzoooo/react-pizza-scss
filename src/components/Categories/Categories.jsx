@@ -6,10 +6,11 @@ const Categories = React.memo(function Categories({activeCategory, items, onClic
     return (
         <div className="categories">
             <ul>
-                <li onClick={()=> onClickItem(null)} className={activeCategory === null ? 'active' : ''}>Все</li>
+                <li onClick={() => onClickItem(null)} className={activeCategory === null ? 'active' : ''}>Все</li>
                 {items &&
                     items.map((item, i) => (
-                        <li key={`${i}_${item}`} onClick={()=> onClickItem(i)} className={activeCategory === i ? 'active' : ''}>{item}</li>
+                        <li key={`${i}_${item}`} onClick={() => onClickItem(i)}
+                            className={activeCategory === i ? 'active' : ''}>{item}</li>
                     ))
                 }
             </ul>

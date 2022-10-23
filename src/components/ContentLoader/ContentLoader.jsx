@@ -1,7 +1,7 @@
 import ContentLoader from "react-content-loader"
 
 function PizzasLoader() {
-    return(
+    return (
         <ContentLoader
             speed={2}
             width={280}
@@ -11,12 +11,12 @@ function PizzasLoader() {
             foregroundColor="#ecebeb"
             className="pizza-block"
         >
-            <rect x="3" y="274" rx="6" ry="6" width="278" height="84" />
-            <circle cx="135" cy="116" r="115" />
-            <rect x="3" y="382" rx="0" ry="0" width="54" height="27" />
-            <rect x="109" y="371" rx="10" ry="10" width="168" height="49" />
-            <rect x="261" y="382" rx="0" ry="0" width="0" height="1" />
-            <rect x="3" y="241" rx="6" ry="6" width="278" height="21" />
+            <rect x="3" y="274" rx="6" ry="6" width="278" height="84"/>
+            <circle cx="135" cy="116" r="115"/>
+            <rect x="3" y="382" rx="0" ry="0" width="54" height="27"/>
+            <rect x="109" y="371" rx="10" ry="10" width="168" height="49"/>
+            <rect x="261" y="382" rx="0" ry="0" width="0" height="1"/>
+            <rect x="3" y="241" rx="6" ry="6" width="278" height="21"/>
         </ContentLoader>
     )
 }
