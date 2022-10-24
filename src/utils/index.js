@@ -5,3 +5,4 @@ export {default as SortPopup} from '../components/SortPopup/SortPopup';
 export {default as Home} from '../components/Home/Home';
 export {default as Cart} from '../components/Cart/Cart';
 export {default as PizzasLoader} from '../components/ContentLoader/ContentLoader';
+export {default as CartItem} from '../components/CartItem/CartItem';
