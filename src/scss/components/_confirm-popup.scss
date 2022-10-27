@@ -1,0 +1,38 @@
+@import '../variables';
+
+.confirm-popup {
+  position: absolute;
+  z-index: 2;
+  width: 410px;
+  height: 260px;
+  background-color: #fff;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 50px;
+
+  &__question {
+    font-size: 37px;
+    font-weight: bold;
+    text-align: center;
+  }
+
+  &__buttons {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+  }
+}
+
+.button__confirm {
+  width: 151px;
+  height: 61px;
+  font-size: 16px;
+  font-weight: bold;
+}

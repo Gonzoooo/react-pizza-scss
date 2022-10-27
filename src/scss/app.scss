@@ -10,8 +10,9 @@ body {
 }
 
 .wrapper {
+  position: relative;
   width: calc(100vw - 100px);
-  height: 100%;
+  max-height: 100%;
   background-color: #fff;
   margin: 0 auto;
   border-radius: 10px;
@@ -244,7 +245,6 @@ body {
 
         span {
           color: darken($color: $gray-line, $amount: 20);
-          font-weight: 500;
           font-weight: 600;
         }
 

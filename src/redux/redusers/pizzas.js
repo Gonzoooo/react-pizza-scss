@@ -1,24 +1,24 @@
 const initialState = {
-    items: [],
-    isLoaded: false
+  items: [],
+  isLoaded: false,
 }
 
 function pizzas(state = initialState, action) {
-    switch (action.type) {
-        case 'SET_LOADED':
-            return {
-                ...state,
-                isLoaded: action.payload,
-            }
-        case 'SET_PIZZAS':
-            return {
-                ...state,
-                items: action.payload,
-                isLoaded: true,
-            }
-        default:
-            return state;
-    }
+  switch (action.type) {
+    case 'SET_LOADED':
+      return {
+        ...state,
+        isLoaded: action.payload,
+      }
+    case 'SET_PIZZAS':
+      return {
+        ...state,
+        items: action.payload,
+        isLoaded: true,
+      }
+    default:
+      return state
+  }
 }
 
-export default pizzas;
+export default pizzas
