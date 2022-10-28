@@ -3,7 +3,6 @@ import { Link } from 'react-router-dom'
 import { useDispatch, useSelector } from 'react-redux'
 import { Button, CartItem } from '../utils'
 import { clearCart, minusCartItem, plusCartItem, removeCartItem } from '../redux/action/cart'
-import ConfirmPopup from './ConfirmPopup'
 import CartEmpty from './CartEmpty'
 
 function Cart() {
@@ -39,7 +38,7 @@ function Cart() {
   return (
     <div className='content'>
       <div className='container container--cart'>
-        <ConfirmPopup />
+        {/*<ConfirmPopup />*/}
         {totalCount ? (
           <div className='cart'>
             <div className='cart__top'>

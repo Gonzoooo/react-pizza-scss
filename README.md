@@ -1,2 +1,17 @@
-<h1 style="text-align: center"> Проект Pizza-react </h1>
-<h2 style="text-align: center"> с версткой на SCSS </h2>
+## Интернет магазин пиццы
+
+### Представляет собой приложение для заказа пиццы с возможностью выбрать размер и количество пицц.
+
+Использованы технологии:
+
+- React
+- Redux
+- SASS
+
+# Для запуска проектка необходимо:
+
+- Запустить "GitBash"("Terminal" на Mac OS);
+- Выполнить команду "git clone https://github.com/Gonzoooo/react-pizza-scss.git";
+- Выполнить команду "cd react-pizza-scss";
+- Выполнить команду "npm install";
+- Выполнить команду "npm start"
