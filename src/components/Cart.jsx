@@ -4,19 +4,20 @@ import { useDispatch, useSelector } from 'react-redux'
 import { Button, CartItem } from '../utils'
 import { clearCart, minusCartItem, plusCartItem, removeCartItem } from '../redux/action/cart'
 import CartEmpty from './CartEmpty'
+import ClearAllPopup from './ClearAllPopup'
 
 function Cart() {
   const dispatch = useDispatch()
   const { totalPrice, totalCount, items } = useSelector(({ cart }) => cart)
+  const [isClearPopupOpen, setIsClearPopupOpen] = React.useState(false)
 
   const addedPizzas = Object.keys(items).map((key) => {
     return items[key].items[0]
   })
 
   function onClearCart() {
-    if (window.confirm('Вы действительно хотите удалить все пиццы?')) {
-      dispatch(clearCart())
-    }
+    dispatch(clearCart())
+    setIsClearPopupOpen(false)
   }
 
   function onPlusItem(id) {
@@ -35,10 +36,16 @@ function Cart() {
     dispatch(removeCartItem(id))
   }
 
+  function toggleOpenPopup() {
+    setIsClearPopupOpen(!isClearPopupOpen)
+  }
+
   return (
     <div className='content'>
+      {isClearPopupOpen ? <ClearAllPopup onClearCart={onClearCart} toggleOpenPopup={toggleOpenPopup} />
+        : <></>
+      }
       <div className='container container--cart'>
-        {/*<ConfirmPopup />*/}
         {totalCount ? (
           <div className='cart'>
             <div className='cart__top'>
@@ -111,8 +118,7 @@ function Cart() {
                     strokeLinejoin='round'
                   />
                 </svg>
-
-                <span onClick={onClearCart}>Очистить корзину</span>
+                <span onClick={toggleOpenPopup}>Очистить корзину</span>
               </div>
             </div>
             <div className='content__items'>
