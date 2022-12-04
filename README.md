@@ -16,4 +16,5 @@
 - Выполнить команду "git clone https://github.com/Gonzoooo/react-pizza-scss.git";
 - Выполнить команду "cd react-pizza-scss";
 - Выполнить команду "npm install";
-- Выполнить команду "npm start"
+- Выполнить команду "npm start";
+- Выполнить команду "npm run server".
